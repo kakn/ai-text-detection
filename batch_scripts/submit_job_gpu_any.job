@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH --job-name=python_gpu_job      # Job name
+#SBATCH --output=job.%j.out            # Output file
+#SBATCH --cpus-per-task=48             # Request 48 CPU cores
+#SBATCH --mem=200G                      # Safe for both A100 80GB & H100 94GB
+#SBATCH --gres=gpu:1                   # Request ONE GPU
+#SBATCH --constraint="gpu_h100|gpu_a100_80gb|gpu_a100_40gb|gpu_rtx6000" # Any good GPU node
+#SBATCH --time=24:00:00                # Max run time (D-HH:MM:SS)
+#SBATCH --partition=acltr              # Partition to submit to
+#SBATCH --mail-type=BEGIN,END          # Email notifications
+
+echo "Running on $(hostname):"
+nvidia-smi
+
+module load Anaconda3
+eval "$(conda shell.bash hook)"
+conda activate /home/kakn/miniconda3/envs/myenv
+
+python -u main.py
+
+conda deactivate

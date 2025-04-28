@@ -1,0 +1,24 @@
+Metrics for control:
+Accuracy: 0.8782539046856227
+Precision: 0.9587178241864983
+Recall: 0.790548658390068
+F1 Score: 0.8665496049165935
+Confusion Matrix:
+[[4824  170]
+ [1046 3948]]
+Metrics for basic:
+Accuracy: 0.9149818034775576
+Precision: 0.9619626378573036
+Recall: 0.8641326324302466
+F1 Score: 0.9104270955373309
+Confusion Matrix:
+[[4777  169]
+ [ 672 4274]]
+Metrics for advanced:
+Accuracy: 0.9038229376257545
+Precision: 0.9609554432705558
+Recall: 0.8418511066398391
+F1 Score: 0.8974688974688975
+Confusion Matrix:
+[[4800  170]
+ [ 786 4184]]

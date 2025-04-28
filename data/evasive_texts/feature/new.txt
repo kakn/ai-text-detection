@@ -1,0 +1,73 @@
+Loading model from data/saved_models/feature_new/xgboost\xgboost_model.pkl...
+Number of CPU cores: 16
+Loading existing feature data...
+Human test data shape: (34058, 925)
+Control data shape before reindexing: (4994, 925)
+Control data shape after reindexing: (4994, 925)
+Truncated human test data shape: (4994, 925)
+Combined test data shape: (9988, 925)
+Making predictions...
+Evaluation for control dataset:
+Evaluating model...
+              precision    recall  f1-score   support
+
+           0       0.97      0.48      0.64      4994
+           1       0.65      0.99      0.79      4994
+
+    accuracy                           0.73      9988
+   macro avg       0.81      0.73      0.71      9988
+weighted avg       0.81      0.73      0.71      9988
+
+Accuracy: 0.7319783740488587
+Precision: 0.6535861063237439
+Recall: 0.9871846215458551
+F1 Score: 0.7864720427534498
+Confusion Matrix:
+[[2381 2613]
+ [  64 4930]]
+Basic data shape before reindexing: (4946, 925)
+Basic data shape after reindexing: (4946, 925)
+Truncated human test data shape: (4946, 925)
+Combined test data shape: (9892, 925)
+Making predictions...
+Evaluation for basic dataset:
+Evaluating model...
+              precision    recall  f1-score   support
+
+           0       0.95      0.42      0.58      4946
+           1       0.63      0.98      0.76      4946
+
+    accuracy                           0.70      9892
+   macro avg       0.79      0.70      0.67      9892
+weighted avg       0.79      0.70      0.67      9892
+
+Accuracy: 0.6984431864132632
+Precision: 0.627318718381113
+Recall: 0.9777598059037607
+F1 Score: 0.764282892137495
+Confusion Matrix:
+[[2073 2873]
+ [ 110 4836]]
+Advanced data shape before reindexing: (4970, 925)
+Advanced data shape after reindexing: (4970, 925)
+Truncated human test data shape: (4970, 925)
+Combined test data shape: (9940, 925)
+Making predictions...
+Evaluation for advanced dataset:
+Evaluating model...
+              precision    recall  f1-score   support
+
+           0       0.94      0.22      0.36      4970
+           1       0.56      0.98      0.71      4970
+
+    accuracy                           0.60      9940
+   macro avg       0.75      0.60      0.54      9940
+weighted avg       0.75      0.60      0.54      9940
+
+Accuracy: 0.602917505030181
+Precision: 0.5583571021106675
+Recall: 0.9847082494969819
+F1 Score: 0.7126319621405169
+Confusion Matrix:
+[[1099 3871]
+ [  76 4894]]

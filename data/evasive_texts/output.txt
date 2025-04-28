@@ -1,0 +1,14 @@
+Statistics for data/evasive_texts/control.csv:
+  Number of empty texts: 6
+  Number of header issues: 487
+  Number of footer issues: 34
+
+Statistics for data/evasive_texts/basic.csv:
+  Number of empty texts: 54
+  Number of header issues: 4071
+  Number of footer issues: 159
+
+Statistics for data/evasive_texts/advanced.csv:
+  Number of empty texts: 30
+  Number of header issues: 4387
+  Number of footer issues: 160
