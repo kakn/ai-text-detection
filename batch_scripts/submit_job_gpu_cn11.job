@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH --job-name=python_gpu_job      # Job name
+#SBATCH --output=job.%j.out            # Output file
+#SBATCH --cpus-per-task=64             # Use 64 CPU cores
+#SBATCH --mem=1000G                    # Allocate RAM
+#SBATCH --gres=gpu:h100:1              # Request 1 H100 GPU
+#SBATCH --time=24:00:00                # Max run time (D-HH:MM:SS)
+#SBATCH --partition=scavenge           # Partition to submit to
+#SBATCH --mail-type=BEGIN,END          # Email notifications
+
+echo "Job started at: $(date)"
+echo "Running on $(hostname):"
+nvidia-smi
+
+echo "Loading Anaconda3 module at: $(date)"
+module load Anaconda3
+eval "$(conda shell.bash hook)"
+
+echo "Activating Conda environment at: $(date)"
+conda activate /home/kakn/miniconda3/envs/myenv
+
+echo "Starting Python script at: $(date)"
+stdbuf -o0 python main.py
+
+echo "Deactivating Conda environment at: $(date)"
+conda deactivate
+
+echo "Job finished at: $(date)"
